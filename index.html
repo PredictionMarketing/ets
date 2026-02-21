@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ETS Intelligence — Complete Intelligence Dossier</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Georgia', serif;
             background: #f8f7f4;
@@ -13,14 +19,16 @@
             line-height: 1.7;
             padding: 40px 20px;
         }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: #fff;
             padding: 60px 50px;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
             border-radius: 4px;
         }
+
         h1 {
             font-size: 2em;
             color: #1a1a2e;
@@ -28,12 +36,14 @@
             padding-bottom: 15px;
             margin-bottom: 8px;
         }
+
         .subtitle {
             color: #666;
             font-style: italic;
             margin-bottom: 30px;
             font-size: 0.95em;
         }
+
         .meta {
             background: #f0f0f0;
             padding: 15px 20px;
@@ -41,7 +51,11 @@
             margin-bottom: 40px;
             font-size: 0.9em;
         }
-        .meta strong { color: #1a1a2e; }
+
+        .meta strong {
+            color: #1a1a2e;
+        }
+
         h2 {
             font-size: 1.5em;
             color: #1a1a2e;
@@ -50,13 +64,18 @@
             padding-bottom: 8px;
             border-bottom: 2px solid #eee;
         }
-        h2 .emoji { margin-right: 8px; }
+
+        h2 .emoji {
+            margin-right: 8px;
+        }
+
         h3 {
             font-size: 1.15em;
             color: #16213e;
             margin-top: 25px;
             margin-bottom: 10px;
         }
+
         h4 {
             font-size: 1em;
             color: #e94560;
@@ -66,17 +85,30 @@
             letter-spacing: 0.5px;
             font-size: 0.85em;
         }
-        p { margin-bottom: 12px; }
-        ul, ol {
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul,
+        ol {
             margin: 10px 0 15px 25px;
         }
-        li { margin-bottom: 6px; }
+
+        li {
+            margin-bottom: 6px;
+        }
+
         a {
             color: #e94560;
             text-decoration: none;
             border-bottom: 1px dotted #e94560;
         }
-        a:hover { color: #c81e45; }
+
+        a:hover {
+            color: #c81e45;
+        }
+
         .finding-box {
             background: #fef9f0;
             border-left: 4px solid #f0a500;
@@ -84,6 +116,7 @@
             margin: 20px 0;
             border-radius: 0 4px 4px 0;
         }
+
         .red-flag {
             background: #fef0f0;
             border-left: 4px solid #e94560;
@@ -91,6 +124,7 @@
             margin: 20px 0;
             border-radius: 0 4px 4px 0;
         }
+
         .green-flag {
             background: #f0fef4;
             border-left: 4px solid #2ecc71;
@@ -98,6 +132,7 @@
             margin: 20px 0;
             border-radius: 0 4px 4px 0;
         }
+
         .verdict-box {
             background: #1a1a2e;
             color: #fff;
@@ -105,34 +140,59 @@
             border-radius: 6px;
             margin: 30px 0;
         }
-        .verdict-box h3 { color: #e94560; margin-top: 0; }
-        .verdict-box ul { color: #ddd; }
+
+        .verdict-box h3 {
+            color: #e94560;
+            margin-top: 0;
+        }
+
+        .verdict-box ul {
+            color: #ddd;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
             font-size: 0.92em;
         }
+
         th {
             background: #1a1a2e;
             color: #fff;
             padding: 12px 15px;
             text-align: left;
         }
+
         td {
             padding: 10px 15px;
             border-bottom: 1px solid #eee;
         }
-        tr:hover td { background: #fafafa; }
+
+        tr:hover td {
+            background: #fafafa;
+        }
+
         .toc {
             background: #f7f7ff;
             padding: 25px 30px;
             border-radius: 6px;
             margin-bottom: 35px;
         }
-        .toc h3 { margin-top: 0; color: #1a1a2e; }
-        .toc ol { margin-left: 20px; }
-        .toc li { margin-bottom: 4px; }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #1a1a2e;
+        }
+
+        .toc ol {
+            margin-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 4px;
+        }
+
         .score {
             display: inline-block;
             padding: 3px 12px;
@@ -140,34 +200,64 @@
             font-weight: bold;
             font-size: 0.85em;
         }
-        .score-low { background: #fde8e8; color: #c0392b; }
-        .score-mid { background: #fef3e0; color: #e67e22; }
-        .score-high { background: #e8f8f0; color: #27ae60; }
+
+        .score-low {
+            background: #fde8e8;
+            color: #c0392b;
+        }
+
+        .score-mid {
+            background: #fef3e0;
+            color: #e67e22;
+        }
+
+        .score-high {
+            background: #e8f8f0;
+            color: #27ae60;
+        }
+
         .separator {
             text-align: center;
             margin: 40px 0;
             color: #ccc;
             letter-spacing: 10px;
         }
+
         @media print {
-            body { padding: 0; background: #fff; }
-            .container { box-shadow: none; padding: 30px; }
+            body {
+                padding: 0;
+                background: #fff;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 30px;
+            }
         }
+
         @media (max-width: 600px) {
-            .container { padding: 25px 20px; }
-            h1 { font-size: 1.5em; }
+            .container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
 
         <h1>🔍 ETS Intelligence — Complete Intelligence Dossier</h1>
         <div class="subtitle">Competitive Intelligence &amp; Credibility Analysis</div>
         <div class="meta">
-            <strong>Compiled by:</strong> Neev | <strong>Date:</strong> February 17, 2025<br>
+            <strong>Compiled by:</strong> Neev | <strong>Date:</strong> February 17, 2025 | <strong>Updated:</strong>
+            February 20, 2025 (YouTube transcript source)<br>
             <strong>Subject:</strong> ETS Intelligence LLC | Schaumburg, Illinois<br>
-            <strong>Purpose:</strong> Comprehensive analysis of company services, credibility, digital presence, and competitive positioning
+            <strong>Purpose:</strong> Comprehensive analysis of company services, credibility, digital presence,
+            competitive positioning, and operational guardrails
         </div>
 
         <!-- TABLE OF CONTENTS -->
@@ -176,13 +266,17 @@
             <ol>
                 <li><a href="#overview">Company Overview</a></li>
                 <li><a href="#services">Service Lines — Deep Analysis</a></li>
+                <li><a href="#sales">Sales &amp; Distribution Model</a> <span class="score score-high">NEW</span></li>
                 <li><a href="#cdr">CDR Certification &amp; Technical Credibility</a></li>
                 <li><a href="#litigation">Expert Testimony &amp; Litigation Footprint</a></li>
                 <li><a href="#reputation">Public Reputation &amp; Reviews</a></li>
                 <li><a href="#digital">Digital Footprint &amp; Site Architecture</a></li>
                 <li><a href="#media">Media, LinkedIn &amp; Professional Visibility</a></li>
                 <li><a href="#competitive">Competitive Landscape</a></li>
+                <li><a href="#b2c">B2C Angle — Future Consideration</a> <span class="score score-mid">NEW</span></li>
                 <li><a href="#verdict">Final Verdict &amp; Strategic Recommendations</a></li>
+                <li><a href="#guardrails">Operational Guardrails &amp; Rules Addendum</a> <span
+                        class="score score-high">NEW</span></li>
             </ol>
         </div>
 
@@ -190,39 +284,116 @@
         <h2 id="overview"><span class="emoji">🏢</span> 1. Company Overview</h2>
 
         <table>
-            <tr><th>Detail</th><th>Information</th></tr>
-            <tr><td>Company Name</td><td>ETS Intelligence LLC</td></tr>
-            <tr><td>Location</td><td>Schaumburg, Illinois</td></tr>
-            <tr><td>Website</td><td><a href="https://etsintelligence.com" target="_blank">etsintelligence.com</a></td></tr>
-            <tr><td>Phone</td><td>(847) 886-2455</td></tr>
-            <tr><td>Email</td><td>info@etsintelligence.com</td></tr>
-            <tr><td>Founded</td><td>2011 (per copyright notice)</td></tr>
-            <tr><td>Primary Services</td><td>Vehicle Forensics (CDR), Digital Forensics, Bug Sweeps (TSCM)</td></tr>
-            <tr><td>Target Market</td><td>Attorneys, Insurance Companies, Law Enforcement, Fleet Operators</td></tr>
-            <tr><td>Company Size</td><td>Appears to be small / boutique operation (est. 2-8 people)</td></tr>
-            <tr><td>Trademarks</td><td>"The ETS Seal", "Digital Alibi"</td></tr>
-            <tr><td>Payment Portal</td><td>collectcheckout.com/r/rktan62nx8tpf178r0jb3vvdml2hct</td></tr>
+            <tr>
+                <th>Detail</th>
+                <th>Information</th>
+            </tr>
+            <tr>
+                <td>Company Name</td>
+                <td>ETS Intelligence LLC</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>Schaumburg, Illinois</td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><a href="https://etsintelligence.com" target="_blank">etsintelligence.com</a></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>(847) 886-2455</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>info@etsintelligence.com</td>
+            </tr>
+            <tr>
+                <td>Founded</td>
+                <td>2011 (per copyright notice)</td>
+            </tr>
+            <tr>
+                <td>Legal Designation</td>
+                <td><strong>Licensed Private Detective Agency</strong> — law enforcement owned and operated</td>
+            </tr>
+            <tr>
+                <td>Primary Services</td>
+                <td>Motor Vehicle Accident Reports, Vehicle Forensics (CDR), Digital Forensics, Bug Sweeps (TSCM)</td>
+            </tr>
+            <tr>
+                <td>Target Market</td>
+                <td>Attorneys, Insurance Companies, Law Enforcement, Fleet Operators</td>
+            </tr>
+            <tr>
+                <td>Experience</td>
+                <td>15+ years of operational history</td>
+            </tr>
+            <tr>
+                <td>Distribution</td>
+                <td>Operates through 5 authorized sellers (we are 1 of 5)</td>
+            </tr>
+            <tr>
+                <td>Company Size</td>
+                <td>Appears to be small / boutique operation (est. 2-8 people)</td>
+            </tr>
+            <tr>
+                <td>Trademarks</td>
+                <td>"The ETS Seal", "Digital Alibi"</td>
+            </tr>
+            <tr>
+                <td>Payment Portal</td>
+                <td>collectcheckout.com/r/rktan62nx8tpf178r0jb3vvdml2hct</td>
+            </tr>
         </table>
 
         <h3>Illinois Licensing</h3>
         <table>
-            <tr><th>License Type</th><th>Number</th><th>Issuing Body</th></tr>
-            <tr><td>Private Detective Agency</td><td>(IL)117-001585</td><td>IL IDFPR</td></tr>
-            <tr><td>Private Alarm Contractor</td><td>(IL)262-000067</td><td>IL IDFPR</td></tr>
-            <tr><td>Private Detective (Individual)</td><td>(IL)122-001332</td><td>IL IDFPR</td></tr>
+            <tr>
+                <th>License Type</th>
+                <th>Number</th>
+                <th>Issuing Body</th>
+            </tr>
+            <tr>
+                <td>Private Detective Agency</td>
+                <td>(IL)117-001585</td>
+                <td>IL IDFPR</td>
+            </tr>
+            <tr>
+                <td>Private Alarm Contractor</td>
+                <td>(IL)262-000067</td>
+                <td>IL IDFPR</td>
+            </tr>
+            <tr>
+                <td>Private Detective (Individual)</td>
+                <td>(IL)122-001332</td>
+                <td>IL IDFPR</td>
+            </tr>
         </table>
-        <p><strong>License Verification:</strong> <a href="https://online-dfpr.com/lookup/licenselookup.aspx" target="_blank">IL IDFPR License Lookup</a></p>
+        <p><strong>License Verification:</strong> <a href="https://online-dfpr.com/lookup/licenselookup.aspx"
+                target="_blank">IL IDFPR License Lookup</a></p>
+
+        <div class="green-flag">
+            <strong>✅ Updated Finding (YouTube Source):</strong> ETS Intelligence holds a specific legal designation as
+            a <strong>licensed private detective agency</strong>, not merely an "investigations firm" or "intelligence
+            company." This is a significant credibility differentiator in the legal services market. The firm is law
+            enforcement owned and operated with 15 years of experience.
+        </div>
 
         <div class="finding-box">
-            <strong>🔎 Key Finding:</strong> ETS Intelligence positions itself as a multi-disciplinary forensics firm, but the breadth of services (vehicle data + digital forensics + bug sweeps + background investigations + process serving) is unusually wide for a small operation. Legitimate firms typically specialize deeply in one area.
+            <strong>🔎 Original Finding:</strong> ETS Intelligence positions itself as a multi-disciplinary forensics
+            firm, but the breadth of services (vehicle data + digital forensics + bug sweeps + background investigations
+            + process serving) is unusually wide for a small operation. Legitimate firms typically specialize deeply in
+            one area.
         </div>
 
         <!-- SECTION 2 -->
         <h2 id="services"><span class="emoji">🔧</span> 2. Service Lines — Deep Analysis</h2>
 
         <h3>2A. Vehicle Forensics / Crash Data Retrieval (CDR)</h3>
-        <p>Their primary advertised service. They claim to extract and analyze Event Data Recorder (EDR) data from vehicles involved in accidents.</p>
-        <p><strong>Source:</strong> <a href="https://etsintelligence.com/vehicle-forensics" target="_blank">etsintelligence.com/vehicle-forensics</a></p>
+        <p>Their primary advertised service. They claim to extract and analyze Event Data Recorder (EDR) data from
+            vehicles involved in accidents.</p>
+        <p><strong>Source:</strong> <a href="https://etsintelligence.com/vehicle-forensics"
+                target="_blank">etsintelligence.com/vehicle-forensics</a></p>
 
         <h4>What They Claim:</h4>
         <ul>
@@ -236,15 +407,21 @@
         </ul>
 
         <h4>How They Position It:</h4>
-        <p>They frame CDR work as the objective, data-driven alternative to traditional accident reconstruction. Their messaging emphasizes that EDR data "doesn't lie" — positioning it as unimpeachable truth in disputed claims. This targets attorneys, insurance adjusters, and fleet managers.</p>
+        <p>They frame CDR work as the objective, data-driven alternative to traditional accident reconstruction. Their
+            messaging emphasizes that EDR data "doesn't lie" — positioning it as unimpeachable truth in disputed claims.
+            This targets attorneys, insurance adjusters, and fleet managers.</p>
 
         <div class="red-flag">
-            <strong>🚩 Red Flag:</strong> Their website does not specify <em>which</em> certifications their analysts hold (Bosch CDR Technician? CDR Analyst? Collision Safety Institute?). Legitimate firms prominently display specific credential names and numbers. The phrasing "certified CDR technicians" is technically vague — certified by whom?
+            <strong>🚩 Red Flag:</strong> Their website does not specify <em>which</em> certifications their analysts
+            hold (Bosch CDR Technician? CDR Analyst? Collision Safety Institute?). Legitimate firms prominently display
+            specific credential names and numbers. The phrasing "certified CDR technicians" is technically vague —
+            certified by whom?
         </div>
 
         <h3>2B. Digital Forensics</h3>
         <p>They advertise cell phone forensics, computer forensics, and data recovery services.</p>
-        <p><strong>Source:</strong> <a href="https://etsintelligence.com/digital-forensics" target="_blank">etsintelligence.com/digital-forensics</a></p>
+        <p><strong>Source:</strong> <a href="https://etsintelligence.com/digital-forensics"
+                target="_blank">etsintelligence.com/digital-forensics</a></p>
 
         <h4>What They Claim:</h4>
         <ul>
@@ -256,56 +433,198 @@
         </ul>
 
         <div class="red-flag">
-            <strong>🚩 Red Flag:</strong> No mention of specific tools (Cellebrite, Magnet AXIOM, EnCase, FTK) or certifications (EnCE, CFCE, CCE, GCFE). Legitimate digital forensics firms lead with their tooling and credentials.
+            <strong>🚩 Red Flag:</strong> No mention of specific tools (Cellebrite, Magnet AXIOM, EnCase, FTK) or
+            certifications (EnCE, CFCE, CCE, GCFE). Legitimate digital forensics firms lead with their tooling and
+            credentials.
         </div>
 
         <h3>2C. TSCM / Bug Sweeps</h3>
         <p>Technical Surveillance Countermeasures — detecting hidden cameras, microphones, GPS trackers.</p>
 
         <div class="finding-box">
-            <strong>🔎 Note:</strong> TSCM is a legitimate but niche service. The combination of TSCM + CDR + Digital Forensics under one small roof is unusual. Each discipline requires significant specialized equipment and training.
+            <strong>🔎 Note:</strong> TSCM is a legitimate but niche service. The combination of TSCM + CDR + Digital
+            Forensics under one small roof is unusual. Each discipline requires significant specialized equipment and
+            training.
         </div>
 
         <h3>2D. Full Service Menu (from Site Navigation)</h3>
         <table>
-            <tr><th>Category</th><th>Services</th></tr>
-            <tr><td><strong>Investigations</strong></td><td>Background, Social Media Intel, Digital, Tech Abuse, Insurance Defense, Corporate, Criminal Defense, Financial, Process Serving, Skip Tracing, Handwriting Analysis, Missing Persons, Child Visit Monitoring</td></tr>
-            <tr><td><strong>Security</strong></td><td>Active Shooter, Hostile Terminations, Executive Protection, Physical Security</td></tr>
-            <tr><td><strong>Sci-Tech</strong></td><td>Digital Forensics, Vehicle Forensics, Video Forensics, CDR Analysis, Penetration Testing</td></tr>
-            <tr><td><strong>Consulting</strong></td><td>Technical Security, Expert Witness, Threat Assessments (TRV), Policy &amp; Procedure</td></tr>
-            <tr><td><strong>Training</strong></td><td>Oxygen Forensics Training, Concealed Carry, Policy &amp; Procedure, ETS Training Center</td></tr>
+            <tr>
+                <th>Category</th>
+                <th>Services</th>
+            </tr>
+            <tr>
+                <td><strong>Investigations</strong></td>
+                <td>Background, Social Media Intel, Digital, Tech Abuse, Insurance Defense, Corporate, Criminal Defense,
+                    Financial, Process Serving, Skip Tracing, Handwriting Analysis, Missing Persons, Child Visit
+                    Monitoring</td>
+            </tr>
+            <tr>
+                <td><strong>Security</strong></td>
+                <td>Active Shooter, Hostile Terminations, Executive Protection, Physical Security</td>
+            </tr>
+            <tr>
+                <td><strong>Sci-Tech</strong></td>
+                <td>Digital Forensics, Vehicle Forensics, Video Forensics, CDR Analysis, Penetration Testing</td>
+            </tr>
+            <tr>
+                <td><strong>Consulting</strong></td>
+                <td>Technical Security, Expert Witness, Threat Assessments (TRV), Policy &amp; Procedure</td>
+            </tr>
+            <tr>
+                <td><strong>Training</strong></td>
+                <td>Oxygen Forensics Training, Concealed Carry, Policy &amp; Procedure, ETS Training Center</td>
+            </tr>
         </table>
 
         <div class="finding-box">
-            <strong>🔎 Note:</strong> They offer Oxygen Forensics <em>training</em>, which suggests they may be an authorized training partner. That's a credibility marker worth verifying — Oxygen Forensics is a major digital forensics platform.
+            <strong>🔎 Note:</strong> They offer Oxygen Forensics <em>training</em>, which suggests they may be an
+            authorized training partner. That's a credibility marker worth verifying — Oxygen Forensics is a major
+            digital forensics platform.
         </div>
 
-        <!-- SECTION 3 -->
-        <h2 id="cdr"><span class="emoji">📜</span> 3. CDR Certification &amp; Technical Credibility</h2>
+        <!-- SECTION 2E: MVA Reports (from YouTube transcript) -->
+        <h3>2E. Motor Vehicle Accident Reports — Core Revenue Product</h3>
+        <p><strong>Source:</strong> ETS Intelligence YouTube Video (promotional/explainer) — reviewed February 2025</p>
+
+        <h4>Product Details:</h4>
+        <ul>
+            <li>Reports delivered in a <strong>synopsis format</strong> — pre-processed, actionable intelligence, not
+                raw data dumps</li>
+            <li>Nationwide coverage confirmed — reports sourced from <strong>locations all over the country</strong>
+            </li>
+            <li>Reports described as <strong>"fresh" and "highly accurate"</strong></li>
+            <li>Key differentiator (their language): <em>"We don't just send you names, we send you potential
+                    clients"</em></li>
+            <li>Methodology: <strong>"Advanced digital targeting to capture high-intent auto accident victims who are
+                    actively likely seeking legal help"</strong></li>
+        </ul>
+
+        <div class="red-flag">
+            <strong>⚠️ Pricing Note — INTERNAL ONLY:</strong> Pricing is intentionally flexible and must
+            <strong>NEVER</strong> be quoted in any content or general conversations. Variables include: bulk purchase
+            volume, geographic market, incident severity (fatalities command higher pricing), and vehicle involvement
+            type (commercial truck accidents are higher cost). All pricing discussions happen in qualified calls only.
+        </div>
+
+        <!-- NEW SECTION 3: Sales & Distribution Model -->
+        <h2 id="sales"><span class="emoji">🤝</span> 3. Sales &amp; Distribution Model</h2>
+
+        <div class="verdict-box">
+            <h3>⚡ Critical Operational Intelligence</h3>
+            <p>This section contains <strong>internal-only</strong> information about the sales structure. Never share
+                externally.</p>
+        </div>
+
+        <h3>Authorized Seller Model</h3>
+        <p>ETS operates through a limited network of <strong>5 authorized sellers.</strong> Our operation is 1 of these
+            5.</p>
+
+        <h4>Key Rules:</h4>
+        <ul>
+            <li><strong>ETS is NEVER revealed</strong> in any public-facing content — not on the website, not in emails,
+                not in ads, not on sales calls</li>
+            <li><strong>We represent ETS's service without naming ETS.</strong> We are the client-facing layer. The
+                brand we present is our own.</li>
+            <li><strong>Most apparent "competitors"</strong> in this space are likely the other 4 authorized sellers —
+                or actual competitors who lack the ability to match ETS's nationwide PI network coverage</li>
+            <li><strong>The real competitive moat</strong> is ETS's infrastructure: licensed private investigators in
+                every state, law enforcement ownership, 15 years of operations, and the digital targeting methodology
+            </li>
+        </ul>
+
+        <h3>Sales Funnel</h3>
+        <table>
+            <tr>
+                <th>Stage</th>
+                <th>Action</th>
+                <th>Goal</th>
+            </tr>
+            <tr>
+                <td>1. Content</td>
+                <td>Website, emails, ads</td>
+                <td>Drive to booked call</td>
+            </tr>
+            <tr>
+                <td>2. Booked Call</td>
+                <td>Qualify prospect, answer general questions</td>
+                <td>Move to partner meeting</td>
+            </tr>
+            <tr>
+                <td>3. Partner Meeting</td>
+                <td>Detailed consultation with our partner</td>
+                <td>Close the deal</td>
+            </tr>
+        </table>
+
+        <h4>Call Protocol:</h4>
+        <ul>
+            <li>We <strong>qualify</strong> the prospect</li>
+            <li>We answer questions about the service in <strong>general terms</strong></li>
+            <li>We do <strong>NOT</strong> quote specific pricing</li>
+            <li>We do <strong>NOT</strong> make legal statements or claims</li>
+            <li>We answer <strong>sufficiently</strong> so the prospect takes the next step: a meeting with our partner
+            </li>
+        </ul>
+
+        <div class="green-flag">
+            <strong>🎯 The Singular Goal:</strong> Every piece of content, every call, every interaction has one
+            objective: <strong>get the prospect to book a qualified consultation call with our partner.</strong>
+        </div>
+
+        <!-- SECTION 4 (was 3) -->
+        <h2 id="cdr"><span class="emoji">📜</span> 4. CDR Certification &amp; Technical Credibility</h2>
 
         <h3>Industry Standard for CDR Work:</h3>
         <table>
-            <tr><th>Certification / Tool</th><th>Issuing Body</th><th>Significance</th></tr>
-            <tr><td>Bosch CDR Technician</td><td>Bosch / Robert Bosch LLC</td><td>Basic tool operation — can extract data</td></tr>
-            <tr><td>Bosch CDR Analyst</td><td>Bosch / Crash Data Group</td><td>Can interpret and report on data (the meaningful one)</td></tr>
-            <tr><td>ACTAR Accreditation</td><td>Accreditation Commission for Traffic Accident Reconstruction</td><td>Gold standard for crash reconstruction experts</td></tr>
-            <tr><td>SAE Membership/Certs</td><td>Society of Automotive Engineers</td><td>Industry body for vehicle systems expertise</td></tr>
+            <tr>
+                <th>Certification / Tool</th>
+                <th>Issuing Body</th>
+                <th>Significance</th>
+            </tr>
+            <tr>
+                <td>Bosch CDR Technician</td>
+                <td>Bosch / Robert Bosch LLC</td>
+                <td>Basic tool operation — can extract data</td>
+            </tr>
+            <tr>
+                <td>Bosch CDR Analyst</td>
+                <td>Bosch / Crash Data Group</td>
+                <td>Can interpret and report on data (the meaningful one)</td>
+            </tr>
+            <tr>
+                <td>ACTAR Accreditation</td>
+                <td>Accreditation Commission for Traffic Accident Reconstruction</td>
+                <td>Gold standard for crash reconstruction experts</td>
+            </tr>
+            <tr>
+                <td>SAE Membership/Certs</td>
+                <td>Society of Automotive Engineers</td>
+                <td>Industry body for vehicle systems expertise</td>
+            </tr>
         </table>
 
         <h3>ETS Intelligence's Verifiable Certifications:</h3>
         <p><span class="score score-mid">🟡 Inconclusive</span></p>
 
         <ul>
-            <li>Website references CDR capability but does <strong>not prominently display</strong> specific certification numbers, Bosch credentials, or ACTAR accreditation</li>
+            <li>Website references CDR capability but does <strong>not prominently display</strong> specific
+                certification numbers, Bosch credentials, or ACTAR accreditation</li>
             <li>No individual analyst names with verifiable credential trails found in public searches</li>
-            <li>They do NOT appear in the Bosch CDR certified provider directory (or if they do, not under the "ETS Intelligence" name)</li>
+            <li>They do NOT appear in the Bosch CDR certified provider directory (or if they do, not under the "ETS
+                Intelligence" name)</li>
             <li>No ACTAR accreditation found linked to the company name</li>
             <li>They <em>do</em> reference using Bosch CDR tools for data extraction, which is the right equipment</li>
-            <li>They claim capability across multiple vehicle makes and models, consistent with how Bosch CDR tools work</li>
+            <li>They claim capability across multiple vehicle makes and models, consistent with how Bosch CDR tools work
+            </li>
         </ul>
 
         <div class="red-flag">
-            <strong>🚩 Critical Gap:</strong> ETS Intelligence does not appear in Bosch's publicly searchable certified analyst database. Their website references CDR capability but does not name specific Bosch certifications, course completion dates, or analyst credential numbers. This is a significant credibility gap in the CDR industry where verifiable certification is expected. Saying "certified" without specifying the certification is a common credibility inflation tactic.
+            <strong>🚩 Critical Gap:</strong> ETS Intelligence does not appear in Bosch's publicly searchable certified
+            analyst database. Their website references CDR capability but does not name specific Bosch certifications,
+            course completion dates, or analyst credential numbers. This is a significant credibility gap in the CDR
+            industry where verifiable certification is expected. Saying "certified" without specifying the certification
+            is a common credibility inflation tactic.
         </div>
 
         <h4>What a Credible CDR Firm Looks Like:</h4>
@@ -323,34 +642,55 @@
             <li><a href="https://www.boschdiagnostics.com/cdr" target="_blank">Bosch CDR Training Info</a></li>
         </ul>
 
-        <!-- SECTION 4 -->
-        <h2 id="litigation"><span class="emoji">⚖️</span> 4. Expert Testimony &amp; Litigation Footprint</h2>
+        <!-- SECTION 5 -->
+        <h2 id="litigation"><span class="emoji">⚖️</span> 5. Expert Testimony &amp; Litigation Footprint</h2>
 
         <h3>Search Results for Court Appearances:</h3>
 
         <div class="finding-box">
-            <strong>🔎 Finding:</strong> Searches for "ETS Intelligence" in combination with court records, depositions, Daubert challenges, and expert witness databases returned <strong>minimal to no results</strong>. This is notable because:
+            <strong>🔎 Finding:</strong> Searches for "ETS Intelligence" in combination with court records, depositions,
+            Daubert challenges, and expert witness databases returned <strong>minimal to no results</strong>. This is
+            notable because:
             <ul style="margin-top: 10px;">
                 <li>Firms that regularly provide expert testimony develop a searchable court record</li>
-                <li>Expert witness directories (SEAK, ExpertPages, JurisPro, ForensisGroup) did not return ETS Intelligence listings</li>
-                <li>No Daubert challenge records found (which would indicate their methodology has been tested in court)</li>
-                <li>No cases found in public court databases (PACER, state court records) where "ETS Intelligence" or its principals appeared as named expert witnesses</li>
+                <li>Expert witness directories (SEAK, ExpertPages, JurisPro, ForensisGroup) did not return ETS
+                    Intelligence listings</li>
+                <li>No Daubert challenge records found (which would indicate their methodology has been tested in court)
+                </li>
+                <li>No cases found in public court databases (PACER, state court records) where "ETS Intelligence" or
+                    its principals appeared as named expert witnesses</li>
                 <li>No published case law referencing their analysis or testimony</li>
             </ul>
         </div>
 
         <div class="red-flag">
-            <strong>🚩 Red Flag:</strong> A company advertising expert testimony services to attorneys should have a verifiable litigation history. The absence of any court record footprint suggests either (a) they are very new to testimony work, (b) they operate under individual names rather than the company name, or (c) the testimony claims are aspirational rather than established.
+            <strong>🚩 Red Flag:</strong> A company advertising expert testimony services to attorneys should have a
+            verifiable litigation history. The absence of any court record footprint suggests either (a) they are very
+            new to testimony work, (b) they operate under individual names rather than the company name, or (c) the
+            testimony claims are aspirational rather than established.
         </div>
 
         <h3>The Critical Distinction:</h3>
         <table>
-            <tr><th>Category</th><th>Description</th><th>ETS Status</th></tr>
-            <tr><td>Report Generation</td><td>"We produce reports that <em>could</em> be used in court"</td><td>✅ Appears to be here</td></tr>
-            <tr><td>Courtroom-Tested Expert</td><td>"We regularly testify and our methodology has survived cross-examination"</td><td>⚠️ No evidence</td></tr>
+            <tr>
+                <th>Category</th>
+                <th>Description</th>
+                <th>ETS Status</th>
+            </tr>
+            <tr>
+                <td>Report Generation</td>
+                <td>"We produce reports that <em>could</em> be used in court"</td>
+                <td>✅ Appears to be here</td>
+            </tr>
+            <tr>
+                <td>Courtroom-Tested Expert</td>
+                <td>"We regularly testify and our methodology has survived cross-examination"</td>
+                <td>⚠️ No evidence</td>
+            </tr>
         </table>
 
-        <p>ETS Intelligence appears to be firmly in the report generation category — a <strong>data extraction and documentation service</strong>, not a battle-tested expert witness firm.</p>
+        <p>ETS Intelligence appears to be firmly in the report generation category — a <strong>data extraction and
+                documentation service</strong>, not a battle-tested expert witness firm.</p>
 
         <h4>Where to Verify:</h4>
         <ul>
@@ -359,18 +699,47 @@
             <li>Expert witness directories (SEAK, ExpertPages, JurisPro)</li>
         </ul>
 
-        <!-- SECTION 5 -->
-        <h2 id="reputation"><span class="emoji">⭐</span> 5. Public Reputation &amp; Reviews</h2>
+        <!-- SECTION 6 -->
+        <h2 id="reputation"><span class="emoji">⭐</span> 6. Public Reputation &amp; Reviews</h2>
 
         <h3>Review Presence:</h3>
         <table>
-            <tr><th>Platform</th><th>Presence</th><th>Notes</th></tr>
-            <tr><td>Google Business</td><td>Minimal / Unverified</td><td>Few if any public reviews</td></tr>
-            <tr><td>Yelp</td><td><a href="https://www.yelp.com/biz/ets-intelligence-schaumburg-5" target="_blank">Listed</a></td><td>Schaumburg listing exists</td></tr>
-            <tr><td>BBB</td><td><a href="https://www.bbb.org/us/il/schaumburg/profile/detective-agency/ets-intelligence-llc-0654-88725709" target="_blank">Listed</a></td><td>Listed as "Detective Agency"</td></tr>
-            <tr><td>Avvo / Legal directories</td><td>Not found</td><td>Not listed as recommended forensics vendor</td></tr>
-            <tr><td>Industry forums</td><td>No mentions found</td><td>No discussion in CDR or digital forensics communities</td></tr>
-            <tr><td>Trustpilot</td><td>Not found</td><td>—</td></tr>
+            <tr>
+                <th>Platform</th>
+                <th>Presence</th>
+                <th>Notes</th>
+            </tr>
+            <tr>
+                <td>Google Business</td>
+                <td>Minimal / Unverified</td>
+                <td>Few if any public reviews</td>
+            </tr>
+            <tr>
+                <td>Yelp</td>
+                <td><a href="https://www.yelp.com/biz/ets-intelligence-schaumburg-5" target="_blank">Listed</a></td>
+                <td>Schaumburg listing exists</td>
+            </tr>
+            <tr>
+                <td>BBB</td>
+                <td><a href="https://www.bbb.org/us/il/schaumburg/profile/detective-agency/ets-intelligence-llc-0654-88725709"
+                        target="_blank">Listed</a></td>
+                <td>Listed as "Detective Agency"</td>
+            </tr>
+            <tr>
+                <td>Avvo / Legal directories</td>
+                <td>Not found</td>
+                <td>Not listed as recommended forensics vendor</td>
+            </tr>
+            <tr>
+                <td>Industry forums</td>
+                <td>No mentions found</td>
+                <td>No discussion in CDR or digital forensics communities</td>
+            </tr>
+            <tr>
+                <td>Trustpilot</td>
+                <td>Not found</td>
+                <td>—</td>
+            </tr>
         </table>
 
         <h3>Client Testimonials on Their Site:</h3>
@@ -382,14 +751,18 @@
 
         <div class="red-flag">
             <strong>🚩 Reputation Assessment: <span class="score score-mid">Thin</span></strong><br>
-            This is a company operating largely on direct relationships (likely referral-based from insurance adjusters and attorneys they know personally) rather than broad public reputation. They have <strong>not invested in building a verifiable public credibility trail.</strong> No red flags — but no gold stars either. They're a ghost in terms of public reviews.
+            This is a company operating largely on direct relationships (likely referral-based from insurance adjusters
+            and attorneys they know personally) rather than broad public reputation. They have <strong>not invested in
+                building a verifiable public credibility trail.</strong> No red flags — but no gold stars either.
+            They're a ghost in terms of public reviews.
         </div>
 
-        <!-- SECTION 6 -->
-        <h2 id="digital"><span class="emoji">🌐</span> 6. Digital Footprint &amp; Site Architecture</h2>
+        <!-- SECTION 7 -->
+        <h2 id="digital"><span class="emoji">🌐</span> 7. Digital Footprint &amp; Site Architecture</h2>
 
         <h3>Google-Indexed Pages:</h3>
-        <p>Based on the <code>site:etsintelligence.com</code> crawl, the site is <strong>small</strong> — estimated under 15-20 indexed pages total.</p>
+        <p>Based on the <code>site:etsintelligence.com</code> crawl, the site is <strong>small</strong> — estimated
+            under 15-20 indexed pages total.</p>
 
         <h4>Confirmed Pages:</h4>
         <ul>
@@ -414,50 +787,170 @@
 
         <h3>Website Quality Assessment:</h3>
         <table>
-            <tr><th>Factor</th><th>Assessment</th></tr>
-            <tr><td>Design</td><td>Professional but basic — template-level, not custom</td></tr>
-            <tr><td>Content Depth</td><td>Surface-level service descriptions without technical substance</td></tr>
-            <tr><td>SEO</td><td>Minimal — not competing for organic search traffic</td></tr>
-            <tr><td>Trust Signals</td><td>Weak — no certifications displayed, no client logos, no association memberships</td></tr>
-            <tr><td>Conversion Strategy</td><td>Simple contact form — no sophisticated lead capture</td></tr>
+            <tr>
+                <th>Factor</th>
+                <th>Assessment</th>
+            </tr>
+            <tr>
+                <td>Design</td>
+                <td>Professional but basic — template-level, not custom</td>
+            </tr>
+            <tr>
+                <td>Content Depth</td>
+                <td>Surface-level service descriptions without technical substance</td>
+            </tr>
+            <tr>
+                <td>SEO</td>
+                <td>Minimal — not competing for organic search traffic</td>
+            </tr>
+            <tr>
+                <td>Trust Signals</td>
+                <td>Weak — no certifications displayed, no client logos, no association memberships</td>
+            </tr>
+            <tr>
+                <td>Conversion Strategy</td>
+                <td>Simple contact form — no sophisticated lead capture</td>
+            </tr>
         </table>
 
         <div class="finding-box">
-            <strong>🔎 Assessment:</strong> This is a <strong>digital brochure, not a business platform.</strong> ETS Intelligence has not invested in content marketing, SEO, or digital authority building. They are getting business through referrals, insurance industry networks, and direct outreach — not through their website.
+            <strong>🔎 Assessment:</strong> This is a <strong>digital brochure, not a business platform.</strong> ETS
+            Intelligence has not invested in content marketing, SEO, or digital authority building. They are getting
+            business through referrals, insurance industry networks, and direct outreach — not through their website.
         </div>
 
         <h3>All Known ETS Intelligence URLs:</h3>
         <table>
-            <tr><th>URL</th><th>Status</th></tr>
-            <tr><td><a href="https://etsintelligence.com/" target="_blank">etsintelligence.com/</a></td><td>✅ Read</td></tr>
-            <tr><td><a href="https://etsintelligence.com/vehicle-forensics" target="_blank">etsintelligence.com/vehicle-forensics</a></td><td>✅ Read</td></tr>
-            <tr><td><a href="https://etsintelligence.com/digital-forensics" target="_blank">etsintelligence.com/digital-forensics</a></td><td>✅ Read</td></tr>
-            <tr><td><a href="https://etsintelligence.com/digital-investigations" target="_blank">etsintelligence.com/digital-investigations</a></td><td>✅ Read</td></tr>
-            <tr><td><a href="https://etsintelligence.com/m/login" target="_blank">etsintelligence.com/m/login</a></td><td>📋 Known</td></tr>
-            <tr><td><a href="https://etsintelligence.com/ets-training-center" target="_blank">etsintelligence.com/ets-training-center</a></td><td>📋 Known</td></tr>
-            <tr><td><a href="https://etsintelligence.com/policy-%26-procedure-3" target="_blank">etsintelligence.com/policy-&amp;-procedure-3</a></td><td>📋 Known</td></tr>
-            <tr><td><a href="https://etsintelligence.com/background-investigations" target="_blank">etsintelligence.com/background-investigations</a></td><td>📋 Known</td></tr>
-            <tr><td><a href="https://etsintelligence.com/about-us" target="_blank">etsintelligence.com/about-us</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/cdr-analysis" target="_blank">etsintelligence.com/cdr-analysis</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/expert-witness" target="_blank">etsintelligence.com/expert-witness</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/video-forensics" target="_blank">etsintelligence.com/video-forensics</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/insurance-defense" target="_blank">etsintelligence.com/insurance-defense</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/criminal-defense" target="_blank">etsintelligence.com/criminal-defense</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/social-media-intelligence" target="_blank">etsintelligence.com/social-media-intelligence</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/penetration-testing" target="_blank">etsintelligence.com/penetration-testing</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/active-shooter" target="_blank">etsintelligence.com/active-shooter</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/executive-protection" target="_blank">etsintelligence.com/executive-protection</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/skip-tracing" target="_blank">etsintelligence.com/skip-tracing</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/fingerprinting" target="_blank">etsintelligence.com/fingerprinting</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/oxygen-forensics-training" target="_blank">etsintelligence.com/oxygen-forensics-training</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/concealed-carry" target="_blank">etsintelligence.com/concealed-carry</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/contact-us" target="_blank">etsintelligence.com/contact-us</a></td><td>📋 Discovered (nav)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/privacy-policy-1" target="_blank">etsintelligence.com/privacy-policy-1</a></td><td>📋 Discovered (footer)</td></tr>
-            <tr><td><a href="https://etsintelligence.com/terms-and-conditions" target="_blank">etsintelligence.com/terms-and-conditions</a></td><td>📋 Discovered (footer)</td></tr>
+            <tr>
+                <th>URL</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/" target="_blank">etsintelligence.com/</a></td>
+                <td>✅ Read</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/vehicle-forensics"
+                        target="_blank">etsintelligence.com/vehicle-forensics</a></td>
+                <td>✅ Read</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/digital-forensics"
+                        target="_blank">etsintelligence.com/digital-forensics</a></td>
+                <td>✅ Read</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/digital-investigations"
+                        target="_blank">etsintelligence.com/digital-investigations</a></td>
+                <td>✅ Read</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/m/login" target="_blank">etsintelligence.com/m/login</a></td>
+                <td>📋 Known</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/ets-training-center"
+                        target="_blank">etsintelligence.com/ets-training-center</a></td>
+                <td>📋 Known</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/policy-%26-procedure-3"
+                        target="_blank">etsintelligence.com/policy-&amp;-procedure-3</a></td>
+                <td>📋 Known</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/background-investigations"
+                        target="_blank">etsintelligence.com/background-investigations</a></td>
+                <td>📋 Known</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/about-us" target="_blank">etsintelligence.com/about-us</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/cdr-analysis"
+                        target="_blank">etsintelligence.com/cdr-analysis</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/expert-witness"
+                        target="_blank">etsintelligence.com/expert-witness</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/video-forensics"
+                        target="_blank">etsintelligence.com/video-forensics</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/insurance-defense"
+                        target="_blank">etsintelligence.com/insurance-defense</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/criminal-defense"
+                        target="_blank">etsintelligence.com/criminal-defense</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/social-media-intelligence"
+                        target="_blank">etsintelligence.com/social-media-intelligence</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/penetration-testing"
+                        target="_blank">etsintelligence.com/penetration-testing</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/active-shooter"
+                        target="_blank">etsintelligence.com/active-shooter</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/executive-protection"
+                        target="_blank">etsintelligence.com/executive-protection</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/skip-tracing"
+                        target="_blank">etsintelligence.com/skip-tracing</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/fingerprinting"
+                        target="_blank">etsintelligence.com/fingerprinting</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/oxygen-forensics-training"
+                        target="_blank">etsintelligence.com/oxygen-forensics-training</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/concealed-carry"
+                        target="_blank">etsintelligence.com/concealed-carry</a></td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/contact-us" target="_blank">etsintelligence.com/contact-us</a>
+                </td>
+                <td>📋 Discovered (nav)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/privacy-policy-1"
+                        target="_blank">etsintelligence.com/privacy-policy-1</a></td>
+                <td>📋 Discovered (footer)</td>
+            </tr>
+            <tr>
+                <td><a href="https://etsintelligence.com/terms-and-conditions"
+                        target="_blank">etsintelligence.com/terms-and-conditions</a></td>
+                <td>📋 Discovered (footer)</td>
+            </tr>
         </table>
 
-        <!-- SECTION 7 -->
-        <h2 id="media"><span class="emoji">📰</span> 7. Media, LinkedIn &amp; Professional Visibility</h2>
+        <!-- SECTION 8 -->
+        <h2 id="media"><span class="emoji">📰</span> 8. Media, LinkedIn &amp; Professional Visibility</h2>
 
         <h3>LinkedIn Presence:</h3>
         <p><span class="score score-mid">🟡 Minimal</span></p>
@@ -470,75 +963,215 @@
 
         <h3>Press &amp; Media Coverage:</h3>
         <ul>
-            <li><strong>Zero</strong> press releases found through standard PR distribution channels (PR Newswire, BusinessWire, etc.)</li>
-            <li><strong>Zero</strong> news articles referencing ETS Intelligence (excluding Educational Testing Service noise)</li>
+            <li><strong>Zero</strong> press releases found through standard PR distribution channels (PR Newswire,
+                BusinessWire, etc.)</li>
+            <li><strong>Zero</strong> news articles referencing ETS Intelligence (excluding Educational Testing Service
+                noise)</li>
             <li><strong>Zero</strong> industry publication features or interviews</li>
             <li><strong>Zero</strong> conference speaking engagements found</li>
         </ul>
 
         <h3>Professional Association Visibility:</h3>
         <table>
-            <tr><th>Association</th><th>Membership Found?</th></tr>
-            <tr><td>ACTAR (Accreditation Commission for Traffic Accident Reconstruction)</td><td>❌ No</td></tr>
-            <tr><td>SAE International</td><td>❌ Not confirmed</td></tr>
-            <tr><td>NAFE (National Association of Forensic Engineers)</td><td>❌ Not confirmed</td></tr>
-            <tr><td>IACIS (Int'l Assoc. Computer Investigative Specialists)</td><td>❌ Not confirmed</td></tr>
-            <tr><td>IACP (Int'l Assoc. Chiefs of Police)</td><td>❌ Not confirmed</td></tr>
-            <tr><td>HTCIA (High Technology Crime Investigation Assoc.)</td><td>❌ Not confirmed</td></tr>
-            <tr><td>AAFS (American Academy of Forensic Sciences)</td><td>❌ Not confirmed</td></tr>
+            <tr>
+                <th>Association</th>
+                <th>Membership Found?</th>
+            </tr>
+            <tr>
+                <td>ACTAR (Accreditation Commission for Traffic Accident Reconstruction)</td>
+                <td>❌ No</td>
+            </tr>
+            <tr>
+                <td>SAE International</td>
+                <td>❌ Not confirmed</td>
+            </tr>
+            <tr>
+                <td>NAFE (National Association of Forensic Engineers)</td>
+                <td>❌ Not confirmed</td>
+            </tr>
+            <tr>
+                <td>IACIS (Int'l Assoc. Computer Investigative Specialists)</td>
+                <td>❌ Not confirmed</td>
+            </tr>
+            <tr>
+                <td>IACP (Int'l Assoc. Chiefs of Police)</td>
+                <td>❌ Not confirmed</td>
+            </tr>
+            <tr>
+                <td>HTCIA (High Technology Crime Investigation Assoc.)</td>
+                <td>❌ Not confirmed</td>
+            </tr>
+            <tr>
+                <td>AAFS (American Academy of Forensic Sciences)</td>
+                <td>❌ Not confirmed</td>
+            </tr>
         </table>
 
         <div class="red-flag">
             <strong>🚩 Visibility Assessment: <span class="score score-low">🔴 Very Low</span></strong><br>
-            ETS Intelligence has essentially <strong>zero public media or professional visibility</strong>. They are not participating in the industry conversation at all — no conferences, no publications, no press, no thought leadership. This is a company that exists almost entirely through direct sales relationships.
-        </div>
-
-        <!-- SECTION 8 -->
-        <h2 id="competitive"><span class="emoji">🎯</span> 8. Competitive Landscape</h2>
-
-        <h3>Strengths:</h3>
-        <table>
-            <tr><th>Strength</th><th>Detail</th></tr>
-            <tr><td>Niche Positioning</td><td>Combined vehicle + digital forensics is a legitimate differentiator</td></tr>
-            <tr><td>Growing Market</td><td>CDR/EDR analysis demand is increasing as vehicle technology advances</td></tr>
-            <tr><td>Geographic Advantage</td><td>Chicago metro area = large insurance and legal market</td></tr>
-            <tr><td>Low Profile = Low Controversy</td><td>No negative press, no public complaints, no Daubert failures</td></tr>
-        </table>
-
-        <h3>Vulnerabilities:</h3>
-        <table>
-            <tr><th>Vulnerability</th><th>Severity</th><th>Detail</th></tr>
-            <tr><td>No Verifiable Certifications</td><td><span class="score score-low">🔴 HIGH</span></td><td>Cannot confirm Bosch CDR certification or ACTAR accreditation</td></tr>
-            <tr><td>No Courtroom Track Record</td><td><span class="score score-low">🔴 HIGH</span></td><td>No evidence of expert testimony or Daubert-tested methodology</td></tr>
-            <tr><td>No Named Experts</td><td><span class="score score-low">🔴 HIGH</span></td><td>Can't find individual credentialed analysts to verify</td></tr>
-            <tr><td>No Case Studies</td><td><span class="score score-low">🔴 HIGH</span></td><td>No proof of successful outcomes</td></tr>
-            <tr><td>Thin Online Presence</td><td><span class="score score-mid">🟡 MEDIUM</span></td><td>Minimal reviews, no media coverage, weak SEO</td></tr>
-            <tr><td>No Thought Leadership</td><td><span class="score score-mid">🟡 MEDIUM</span></td><td>Zero content marketing, no industry participation</td></tr>
-            <tr><td>Template Website</td><td><span class="score score-mid">🟡 MEDIUM</span></td><td>Doesn't convey premium expertise</td></tr>
-        </table>
-
-        <h3>How ETS Compares to Established Competitors:</h3>
-        <table>
-            <tr><th>Factor</th><th>ETS Intelligence</th><th>Established Competitor</th></tr>
-            <tr><td>Named Examiners</td><td>❌ None visible</td><td>✅ Full bios with credentials</td></tr>
-            <tr><td>Specific Certifications</td><td>Vague claims</td><td>Bosch CDR Analyst, ACTAR listed</td></tr>
-            <tr><td>Court History</td><td>None found</td><td>Verifiable testimony record</td></tr>
-            <tr><td>Published Work</td><td>None</td><td>Articles, presentations, papers</td></tr>
-            <tr><td>Industry Presence</td><td>Invisible</td><td>Conference speakers, association members</td></tr>
-            <tr><td>Client Testimonials</td><td>None verifiable</td><td>Attorney endorsements on site</td></tr>
-            <tr><td>Content Depth</td><td>4-6 pages</td><td>Deep resource libraries</td></tr>
-        </table>
-
-        <div class="finding-box">
-            <strong>🔎 The Opportunity for Tommy:</strong> ETS Intelligence has real technical capability but zero public marketing sophistication. A firm that brings verifiable certifications, named credentialed experts, courtroom testimony history, published case studies, and genuine thought leadership content would <strong>absolutely dominate</strong> ETS Intelligence in any head-to-head credibility comparison. They're not bad — they're just not built to withstand scrutiny.
+            ETS Intelligence has essentially <strong>zero public media or professional visibility</strong>. They are not
+            participating in the industry conversation at all — no conferences, no publications, no press, no thought
+            leadership. This is a company that exists almost entirely through direct sales relationships.
         </div>
 
         <!-- SECTION 9 -->
-        <h2 id="verdict"><span class="emoji">📊</span> 9. Final Verdict &amp; Strategic Recommendations</h2>
+        <h2 id="competitive"><span class="emoji">🎯</span> 9. Competitive Landscape</h2>
+
+        <div class="green-flag">
+            <strong>✅ Updated Intelligence (YouTube Source):</strong> The competitive landscape is <strong>narrower than
+                it appears.</strong> With only 5 authorized sellers for ETS's products, much of what surfaces as
+            "competition" in market research may actually be fellow authorized sellers rather than true competitors.
+            Genuine competitors lack the key differentiator: a nationwide network of licensed private investigators
+            operating under a law enforcement-owned agency with 15 years of operational history. This makes the
+            competitive moat exceptionally deep for anyone trying to enter from scratch.
+        </div>
+
+        <h3>Strengths:</h3>
+        <table>
+            <tr>
+                <th>Strength</th>
+                <th>Detail</th>
+            </tr>
+            <tr>
+                <td>Nationwide PI Network</td>
+                <td>Licensed private investigators in every state — no competitor can replicate this quickly</td>
+            </tr>
+            <tr>
+                <td>Law Enforcement Ownership</td>
+                <td>Operated by law enforcement — massive credibility and access advantage</td>
+            </tr>
+            <tr>
+                <td>15 Years of Operations</td>
+                <td>Established track record and infrastructure</td>
+            </tr>
+            <tr>
+                <td>Digital Targeting Methodology</td>
+                <td>"Advanced digital targeting to capture high-intent auto accident victims"</td>
+            </tr>
+            <tr>
+                <td>Limited Distribution</td>
+                <td>Only 5 authorized sellers — controlled market with managed competition</td>
+            </tr>
+            <tr>
+                <td>Niche Positioning</td>
+                <td>Combined vehicle + digital forensics is a legitimate differentiator</td>
+            </tr>
+            <tr>
+                <td>Growing Market</td>
+                <td>CDR/EDR analysis demand is increasing as vehicle technology advances</td>
+            </tr>
+        </table>
+
+        <h3>Vulnerabilities (Public-Facing):</h3>
+        <table>
+            <tr>
+                <th>Vulnerability</th>
+                <th>Severity</th>
+                <th>Detail</th>
+            </tr>
+            <tr>
+                <td>No Verifiable Certifications</td>
+                <td><span class="score score-low">🔴 HIGH</span></td>
+                <td>Cannot confirm Bosch CDR certification or ACTAR accreditation</td>
+            </tr>
+            <tr>
+                <td>No Courtroom Track Record</td>
+                <td><span class="score score-low">🔴 HIGH</span></td>
+                <td>No evidence of expert testimony or Daubert-tested methodology</td>
+            </tr>
+            <tr>
+                <td>No Named Experts</td>
+                <td><span class="score score-low">🔴 HIGH</span></td>
+                <td>Can't find individual credentialed analysts to verify</td>
+            </tr>
+            <tr>
+                <td>No Case Studies</td>
+                <td><span class="score score-low">🔴 HIGH</span></td>
+                <td>No proof of successful outcomes</td>
+            </tr>
+            <tr>
+                <td>Thin Online Presence</td>
+                <td><span class="score score-mid">🟡 MEDIUM</span></td>
+                <td>Minimal reviews, no media coverage, weak SEO</td>
+            </tr>
+            <tr>
+                <td>No Thought Leadership</td>
+                <td><span class="score score-mid">🟡 MEDIUM</span></td>
+                <td>Zero content marketing, no industry participation</td>
+            </tr>
+            <tr>
+                <td>Template Website</td>
+                <td><span class="score score-mid">🟡 MEDIUM</span></td>
+                <td>Doesn't convey premium expertise</td>
+            </tr>
+        </table>
+
+        <h3>True Competitive Dynamic:</h3>
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>Detail</th>
+            </tr>
+            <tr>
+                <td>Other Authorized Sellers (4)</td>
+                <td>Not true competitors — same product, different brands. May appear as competition in market research.
+                </td>
+            </tr>
+            <tr>
+                <td>Genuine Competitors</td>
+                <td>Any firm trying to replicate ETS's nationwide PI network + law enforcement credentials from scratch.
+                    <strong>The barrier to entry is extremely high.</strong>
+                </td>
+            </tr>
+        </table>
+
+        <div class="finding-box">
+            <strong>🔎 The Opportunity for Tommy:</strong> ETS Intelligence has real technical capability but zero
+            public marketing sophistication. A firm that brings verifiable certifications, named credentialed experts,
+            courtroom testimony history, published case studies, and genuine thought leadership content would
+            <strong>absolutely dominate</strong> ETS Intelligence in any head-to-head credibility comparison. The
+            5-seller model means the real play is out-marketing the other 4 authorized sellers, not competing against
+            ETS itself.
+        </div>
+
+        <!-- SECTION 10: B2C Angle -->
+        <h2 id="b2c"><span class="emoji">🔮</span> 10. B2C Angle — Future Consideration</h2>
+
+        <div class="finding-box">
+            <strong>⚠️ STATUS: FUTURE CONSIDERATION — NOT IN CURRENT SCOPE</strong>
+        </div>
+
+        <p>The YouTube video includes a B2C testimonial segment featuring a person describing their experience after a
+            car accident: "drowning in bills," discovering they could "qualify for a cash settlement," filling out a
+            form, and being guided through the process by experts.</p>
+
+        <p><strong>This suggests ETS may have (or is developing) a direct-to-consumer funnel</strong> where accident
+            victims self-identify and are matched with legal representation. This is a potentially powerful secondary
+            revenue model.</p>
+
+        <h4>If Activated, This Would Involve:</h4>
+        <ul>
+            <li>Direct-to-consumer lead generation for accident victims</li>
+            <li>A <strong>separate brand and funnel</strong> (completely distinct from the B2B law firm play)</li>
+            <li>Different compliance requirements (consumer protection laws, advertising regulations)</li>
+            <li>A potential upsell to current law firm clients: <em>"We can also drive claimants directly to your
+                    firm"</em></li>
+        </ul>
+
+        <div class="red-flag">
+            <strong>🚫 Current Status:</strong> This stays on the shelf until the B2B machine is running. NOT part of
+            our current engagement. Tagged for future strategic discussion.
+        </div>
+
+        <!-- SECTION 11: Final Verdict -->
+        <h2 id="verdict"><span class="emoji">📊</span> 11. Final Verdict &amp; Strategic Recommendations</h2>
 
         <div class="verdict-box">
             <h3>Overall Credibility Score: 4/10</h3>
-            <p>ETS Intelligence presents as a <strong>small, low-visibility forensics shop</strong> that may do competent work for their existing client base but has <strong>not built the public credibility infrastructure</strong> expected of a leading forensics firm. Their marketing says "expert" but their public footprint says "small vendor."</p>
+            <p>ETS Intelligence presents as a <strong>small, low-visibility forensics shop</strong> that may do
+                competent work for their existing client base but has <strong>not built the public credibility
+                    infrastructure</strong> expected of a leading forensics firm. Their marketing says "expert" but
+                their public footprint says "small vendor."</p>
             <ul style="margin-top: 15px;">
                 <li>Technical vocabulary is correct — they understand the industry language</li>
                 <li>Service awareness is real — they know what the market needs</li>
@@ -549,12 +1182,19 @@
 
         <h3>🎯 Recommended Next Steps:</h3>
         <ol>
-            <li><strong>FOIA/Public Records:</strong> Pull their Illinois LLC filing for formation date and registered agent — <a href="https://www.ilsos.gov/corporatellc/" target="_blank">IL Secretary of State Business Search</a></li>
-            <li><strong>Direct Verification:</strong> Ask them directly for examiner names, specific certifications, and case references</li>
-            <li><strong>ACTAR Search:</strong> Confirm absence at <a href="https://actar.org/search" target="_blank">actar.org/search</a></li>
-            <li><strong>Bosch Verification:</strong> Contact Bosch CDR training to verify any claimed certifications (requires examiner names)</li>
-            <li><strong>Court Records:</strong> Search <a href="https://pacer.uscourts.gov/" target="_blank">PACER</a> and Illinois courts for any litigation involving "ETS Intelligence"</li>
-            <li><strong>Competitive Analysis:</strong> Compare their pricing and turnaround against verified competitors</li>
+            <li><strong>FOIA/Public Records:</strong> Pull their Illinois LLC filing for formation date and registered
+                agent — <a href="https://www.ilsos.gov/corporatellc/" target="_blank">IL Secretary of State Business
+                    Search</a></li>
+            <li><strong>Direct Verification:</strong> Ask them directly for examiner names, specific certifications, and
+                case references</li>
+            <li><strong>ACTAR Search:</strong> Confirm absence at <a href="https://actar.org/search"
+                    target="_blank">actar.org/search</a></li>
+            <li><strong>Bosch Verification:</strong> Contact Bosch CDR training to verify any claimed certifications
+                (requires examiner names)</li>
+            <li><strong>Court Records:</strong> Search <a href="https://pacer.uscourts.gov/" target="_blank">PACER</a>
+                and Illinois courts for any litigation involving "ETS Intelligence"</li>
+            <li><strong>Competitive Analysis:</strong> Compare their pricing and turnaround against verified competitors
+            </li>
         </ol>
 
         <div class="separator">• • •</div>
@@ -562,31 +1202,259 @@
         <h2>🔗 Master Source Reference</h2>
 
         <table>
-            <tr><th>Source</th><th>URL</th></tr>
-            <tr><td>ETS Intelligence — Main Site</td><td><a href="https://etsintelligence.com" target="_blank">etsintelligence.com</a></td></tr>
-            <tr><td>ETS Intelligence — Vehicle Forensics</td><td><a href="https://etsintelligence.com/vehicle-forensics" target="_blank">etsintelligence.com/vehicle-forensics</a></td></tr>
-            <tr><td>ETS Intelligence — Digital Forensics</td><td><a href="https://etsintelligence.com/digital-forensics" target="_blank">etsintelligence.com/digital-forensics</a></td></tr>
-            <tr><td>ETS Intelligence — Digital Investigations</td><td><a href="https://etsintelligence.com/digital-investigations" target="_blank">etsintelligence.com/digital-investigations</a></td></tr>
-            <tr><td>BBB Profile</td><td><a href="https://www.bbb.org/us/il/schaumburg/profile/detective-agency/ets-intelligence-llc-0654-88725709" target="_blank">bbb.org/...ets-intelligence-llc</a></td></tr>
-            <tr><td>Yelp Profile</td><td><a href="https://www.yelp.com/biz/ets-intelligence-schaumburg-5" target="_blank">yelp.com/biz/ets-intelligence</a></td></tr>
-            <tr><td>IL IDFPR License Lookup</td><td><a href="https://online-dfpr.com/lookup/licenselookup.aspx" target="_blank">online-dfpr.com/lookup</a></td></tr>
-            <tr><td>IL Secretary of State (LLC Search)</td><td><a href="https://www.ilsos.gov/corporatellc/" target="_blank">ilsos.gov/corporatellc</a></td></tr>
-            <tr><td>ACTAR Accreditation Search</td><td><a href="https://actar.org/search" target="_blank">actar.org/search</a></td></tr>
-            <tr><td>Bosch CDR Tool Info</td><td><a href="https://www.boschdiagnostics.com/cdr" target="_blank">boschdiagnostics.com/cdr</a></td></tr>
-            <tr><td>PACER Federal Court Records</td><td><a href="https://pacer.uscourts.gov/" target="_blank">pacer.uscourts.gov</a></td></tr>
-            <tr><td>Illinois Court Records</td><td><a href="https://www.illinoiscourts.gov/" target="_blank">illinoiscourts.gov</a></td></tr>
+            <tr>
+                <th>Source</th>
+                <th>URL</th>
+            </tr>
+            <tr>
+                <td>ETS Intelligence — Main Site</td>
+                <td><a href="https://etsintelligence.com" target="_blank">etsintelligence.com</a></td>
+            </tr>
+            <tr>
+                <td>ETS Intelligence — Vehicle Forensics</td>
+                <td><a href="https://etsintelligence.com/vehicle-forensics"
+                        target="_blank">etsintelligence.com/vehicle-forensics</a></td>
+            </tr>
+            <tr>
+                <td>ETS Intelligence — Digital Forensics</td>
+                <td><a href="https://etsintelligence.com/digital-forensics"
+                        target="_blank">etsintelligence.com/digital-forensics</a></td>
+            </tr>
+            <tr>
+                <td>ETS Intelligence — Digital Investigations</td>
+                <td><a href="https://etsintelligence.com/digital-investigations"
+                        target="_blank">etsintelligence.com/digital-investigations</a></td>
+            </tr>
+            <tr>
+                <td>BBB Profile</td>
+                <td><a href="https://www.bbb.org/us/il/schaumburg/profile/detective-agency/ets-intelligence-llc-0654-88725709"
+                        target="_blank">bbb.org/...ets-intelligence-llc</a></td>
+            </tr>
+            <tr>
+                <td>Yelp Profile</td>
+                <td><a href="https://www.yelp.com/biz/ets-intelligence-schaumburg-5"
+                        target="_blank">yelp.com/biz/ets-intelligence</a></td>
+            </tr>
+            <tr>
+                <td>IL IDFPR License Lookup</td>
+                <td><a href="https://online-dfpr.com/lookup/licenselookup.aspx"
+                        target="_blank">online-dfpr.com/lookup</a></td>
+            </tr>
+            <tr>
+                <td>IL Secretary of State (LLC Search)</td>
+                <td><a href="https://www.ilsos.gov/corporatellc/" target="_blank">ilsos.gov/corporatellc</a></td>
+            </tr>
+            <tr>
+                <td>ACTAR Accreditation Search</td>
+                <td><a href="https://actar.org/search" target="_blank">actar.org/search</a></td>
+            </tr>
+            <tr>
+                <td>Bosch CDR Tool Info</td>
+                <td><a href="https://www.boschdiagnostics.com/cdr" target="_blank">boschdiagnostics.com/cdr</a></td>
+            </tr>
+            <tr>
+                <td>PACER Federal Court Records</td>
+                <td><a href="https://pacer.uscourts.gov/" target="_blank">pacer.uscourts.gov</a></td>
+            </tr>
+            <tr>
+                <td>Illinois Court Records</td>
+                <td><a href="https://www.illinoiscourts.gov/" target="_blank">illinoiscourts.gov</a></td>
+            </tr>
+            <tr>
+                <td>ETS Intelligence — YouTube Video</td>
+                <td>ETS Intelligence YouTube Channel (promotional/explainer)</td>
+            </tr>
+        </table>
+
+        <div class="separator">• • •</div>
+
+        <!-- SECTION 12: Operational Guardrails -->
+        <h2 id="guardrails"><span class="emoji">🛡️</span> 12. Operational Guardrails &amp; Rules Addendum</h2>
+
+        <div class="verdict-box">
+            <h3>⚡ Hard Boundaries for All Content &amp; Communications</h3>
+            <p>Every piece of content — website copy, emails, ads, call scripts, AI-generated material — must comply
+                with these rules. <strong>No exceptions.</strong></p>
+        </div>
+
+        <h3>Section 1: Identity &amp; Representation</h3>
+        <table>
+            <tr>
+                <th>Rule</th>
+                <th>Directive</th>
+            </tr>
+            <tr>
+                <td>1.1</td>
+                <td>Never name ETS Intelligence in any public-facing content. Not on the website. Not in emails. Not in
+                    ads. Not on calls.</td>
+            </tr>
+            <tr>
+                <td>1.2</td>
+                <td>Never claim to be ETS Intelligence, an employee of ETS, or a private investigator. We are an
+                    authorized sales partner.</td>
+            </tr>
+            <tr>
+                <td>1.3</td>
+                <td>Never reveal the total number of authorized sellers (five) or reference the existence of other
+                    sellers.</td>
+            </tr>
+            <tr>
+                <td>1.4</td>
+                <td>Refer to the service provider in general terms only: "our partner," "our intelligence provider,"
+                    "our data source."</td>
+            </tr>
+        </table>
+
+        <h3>Section 2: Pricing &amp; Financial Terms</h3>
+        <table>
+            <tr>
+                <th>Rule</th>
+                <th>Directive</th>
+            </tr>
+            <tr>
+                <td>2.1</td>
+                <td>Never quote specific pricing in any content or communication. Nowhere.</td>
+            </tr>
+            <tr>
+                <td>2.2</td>
+                <td>Pricing variables (volume, market, severity, vehicle type) are discussed only in qualified
+                    consultations.</td>
+            </tr>
+            <tr>
+                <td>2.3</td>
+                <td>If asked about pricing: <em>"Pricing depends on your specific needs. That's exactly what the
+                        consultation covers. Let's get you booked."</em></td>
+            </tr>
+            <tr>
+                <td>2.4</td>
+                <td>Never offer discounts, promotions, or special pricing. Pricing decisions belong to ETS.</td>
+            </tr>
+        </table>
+
+        <h3>Section 3: Legal Boundaries</h3>
+        <table>
+            <tr>
+                <th>Rule</th>
+                <th>Directive</th>
+            </tr>
+            <tr>
+                <td>3.1</td>
+                <td>We are not lawyers. Never make legal statements, give legal advice, or imply legal expertise.</td>
+            </tr>
+            <tr>
+                <td>3.2</td>
+                <td>Legal-adjacent language must be general. ✅ "Law firms use accident reports to identify potential
+                    clients." ❌ "These reports will help you win cases."</td>
+            </tr>
+            <tr>
+                <td>3.3</td>
+                <td>Never make claims about legal outcomes, case results, or settlement amounts.</td>
+            </tr>
+            <tr>
+                <td>3.4</td>
+                <td>If asked a legal question: <em>"Great question — better answered by the legal experts on our
+                        partner's side. Let me get you connected."</em></td>
+            </tr>
+            <tr>
+                <td>3.5</td>
+                <td>All content must include appropriate disclaimers where legally advisable.</td>
+            </tr>
+        </table>
+
+        <h3>Section 4: Competitive Positioning</h3>
+        <table>
+            <tr>
+                <th>Rule</th>
+                <th>Directive</th>
+            </tr>
+            <tr>
+                <td>4.1</td>
+                <td>Never name competitors. Acknowledge and redirect to our strengths.</td>
+            </tr>
+            <tr>
+                <td>4.2</td>
+                <td>Lead with coverage (licensed PIs in every state) and data quality (fresh, accurate, synopsis format,
+                    high-intent targeting).</td>
+            </tr>
+            <tr>
+                <td>4.3</td>
+                <td>If a suspected fellow authorized seller is mentioned, treat them as any competitor — don't engage,
+                    redirect.</td>
+            </tr>
+            <tr>
+                <td>4.4</td>
+                <td>Never make comparative claims we can't verify ("We're the only ones who..." etc.) unless confirmed
+                    by ETS.</td>
+            </tr>
+        </table>
+
+        <h3>Section 5: The Singular Goal</h3>
+        <table>
+            <tr>
+                <th>Rule</th>
+                <th>Directive</th>
+            </tr>
+            <tr>
+                <td>5.1</td>
+                <td>Every piece of content has one objective: <strong>book a qualified consultation call with our
+                        partner.</strong></td>
+            </tr>
+            <tr>
+                <td>5.2</td>
+                <td>We qualify prospects. We do not close deals, negotiate terms, or make commitments.</td>
+            </tr>
+            <tr>
+                <td>5.3</td>
+                <td>"Sufficiently" = enough info that the prospect feels confident taking the next step, but not so much
+                    they skip the call.</td>
+            </tr>
+            <tr>
+                <td>5.4</td>
+                <td>If a prospect is clearly unqualified, disqualify politely. Our partner's time is valuable.</td>
+            </tr>
+        </table>
+
+        <h3>Section 6: B2C Angle</h3>
+        <div class="finding-box">
+            <strong>⚠️ STATUS: FUTURE CONSIDERATION — NOT IN CURRENT SCOPE.</strong> The YouTube transcript reveals ETS
+            has B2C positioning (accident victims seeking settlements). Tagged for future exploration. This stays on the
+            shelf until the B2B machine is running.
+        </div>
+
+        <h3>Section 7: Content Review Protocol</h3>
+        <table>
+            <tr>
+                <th>Rule</th>
+                <th>Directive</th>
+            </tr>
+            <tr>
+                <td>7.1</td>
+                <td>All public-facing content must be reviewed against this addendum before publication.</td>
+            </tr>
+            <tr>
+                <td>7.2</td>
+                <td>When in doubt about whether something violates a rule, it probably does. Pull it. Ask. Then decide.
+                </td>
+            </tr>
+            <tr>
+                <td>7.3</td>
+                <td>This is a living document. As new situations arise, new rules get added.</td>
+            </tr>
         </table>
 
         <div class="separator">• • •</div>
 
         <p style="text-align: center; color: #888; font-style: italic; margin-top: 30px;">
             This dossier represents open-source intelligence gathering as of February 2025.<br>
+            Updated February 20, 2025 with YouTube transcript intelligence and operational guardrails.<br>
             Findings are based on publicly available information.<br>
-            Absence of evidence is not evidence of absence, but patterns of absence across multiple vectors are analytically significant.<br><br>
+            Absence of evidence is not evidence of absence, but patterns of absence across multiple vectors are
+            analytically significant.<br><br>
             <strong>Compiled by Neev for Fran &amp; Tommy</strong><br>
             All source links verified at time of compilation.
         </p>
 
     </div>
 </body>
+
 </html>
